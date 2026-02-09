@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VAT Calculator Romania — Net to Gross and Gross to Net</title>
+  <meta name="description" content="VAT calculator for Romania: compute VAT amount, net, and gross. Rates are configurable in one place." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/site.js"></script>
+  <script defer src="js/calculator.js"></script>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <div class="brand"><span class="dot"></span> VAT in Romania</div>
+    <div class="navlinks">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="rates.html">Rates</a>
+      <a data-nav href="registration.html">Registration</a>
+      <a data-nav href="filings.html">Filings</a>
+      <a data-nav href="calculator.html">Calculator</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>VAT calculator</h1>
+    <p>
+      Calculate VAT from net prices or extract VAT from gross prices. Update the rates in
+      <code class="inline">js/calculator.js</code>.
+    </p>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h2>Calculator</h2>
+      <form id="calcForm" class="form">
+        <div class="field">
+          <label for="mode">Mode</label>
+          <select id="mode">
+            <option value="net-to-gross">Net → Gross</option>
+            <option value="gross-to-net">Gross → Net</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="amount">Amount</label>
+          <input id="amount" type="number" inputmode="decimal" step="0.01" placeholder="e.g. 1000" value="1000" />
+          <small>Enter net or gross depending on mode.</small>
+        </div>
+
+        <div class="field">
+          <label for="rate">VAT rate</label>
+          <select id="rate">
+            <option value="standard">Standard (edit %)</option>
+            <option value="reduced1">Reduced (edit %)</option>
+            <option value="reduced2">Reduced (edit %)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="currency">Currency</label>
+          <select id="currency">
+            <option value="RON">RON</option>
+            <option value="EUR">EUR</option>
+            <option value="USD">USD</option>
+          </select>
+        </div>
+
+        <button type="submit">Recalculate</button>
+      </form>
+
+      <hr class="sep" />
+
+      <div class="kpi">
+        <div class="box">
+          <div class="label">Net</div>
+          <div class="value" id="outNet">—</div>
+        </div>
+        <div class="box">
+          <div class="label">VAT</div>
+          <div class="value" id="outVat">—</div>
+        </div>
+        <div class="box">
+          <div class="label">Gross</div>
+          <div class="value" id="outGross">—</div>
+        </div>
+        <div class="box">
+          <div class="label">Rate used</div>
+          <div class="value" id="outRate">—</div>
+        </div>
+      </div>
+
+      <p class="note">
+        Tip: For invoicing, decide whether you quote net or gross prices and be consistent.
+      </p>
+    </article>
+
+    <aside class="card">
+      <h2>How it works</h2>
+      <ul>
+        <li><strong>Net → Gross:</strong> gross = net × (1 + rate)</li>
+        <li><strong>Gross → Net:</strong> net = gross ÷ (1 + rate)</li>
+      </ul>
+
+      <hr class="sep" />
+
+      <h2>Rate maintenance</h2>
+      <p>
+        Update these in <code class="inline">js/calculator.js</code>:
+      </p>
+      <ul>
+        <li><code class="inline">standard</code></li>
+        <li><code class="inline">reduced1</code></li>
+        <li><code class="inline">reduced2</code></li>
+      </ul>
+    </aside>
+  </section>
+
+  <footer>
+    <div>© <span data-year></span> VAT in Romania</div>
+    <div><a href="privacy.html">Privacy</a> · <a href="mailto:hello@your-domain.example">Contact</a></div>
+  </footer>
+</main>
+</body>
+</html>

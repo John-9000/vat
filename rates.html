@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VAT Rates in Romania — Standard and Reduced Rates</title>
+  <meta name="description" content="Overview of VAT rates used in Romania and how to present them responsibly on an informational website." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/site.js"></script>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <div class="brand"><span class="dot"></span> VAT in Romania</div>
+    <div class="navlinks">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="rates.html">Rates</a>
+      <a data-nav href="registration.html">Registration</a>
+      <a data-nav href="filings.html">Filings</a>
+      <a data-nav href="calculator.html">Calculator</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>VAT rates</h1>
+    <p>
+      Many countries have a standard VAT rate and one or more reduced rates for specific goods/services.
+      Because rates can change, publish them with a “last updated” note and a single source of truth in your code.
+    </p>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h2>How to present rates on your site</h2>
+      <ul>
+        <li>Show <strong>rate categories</strong> (standard / reduced) with examples.</li>
+        <li>Avoid over-promising: “common applications” instead of “always.”</li>
+        <li>Add a <strong>last updated</strong> line and your source link(s).</li>
+        <li>Keep rates configurable (one file / one CMS field), not scattered across pages.</li>
+      </ul>
+
+      <hr class="sep" />
+
+      <h2>Example table (edit to match current law)</h2>
+      <table class="table">
+        <thead>
+          <tr><th>Category</th><th>Rate</th><th>Typical examples (verify)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Standard</td><td><code class="inline">19%</code></td><td>General goods and services</td></tr>
+          <tr><td>Reduced</td><td><code class="inline">9%</code></td><td>Some food items, hospitality, etc.</td></tr>
+          <tr><td>Reduced</td><td><code class="inline">5%</code></td><td>Some books, cultural items, etc.</td></tr>
+        </tbody>
+      </table>
+
+      <p class="note">
+        Replace examples and rates with up-to-date information and cite official sources.
+        If you’d rather avoid publishing exact rates, you can describe categories and link to official guidance.
+      </p>
+    </article>
+
+    <aside class="card">
+      <h2>Maintenance tip</h2>
+      <p>
+        If you use this starter, update VAT rates in one place:
+        <code class="inline">js/calculator.js</code> → <code class="inline">VAT_RATES</code>.
+      </p>
+
+      <hr class="sep" />
+
+      <h2>FAQ ideas</h2>
+      <ul>
+        <li>What is the difference between net and gross pricing?</li>
+        <li>What’s input VAT vs output VAT?</li>
+        <li>What is a VAT invoice and what must it include?</li>
+        <li>Do foreign businesses need Romanian VAT registration?</li>
+      </ul>
+    </aside>
+  </section>
+
+  <footer>
+    <div>© <span data-year></span> VAT in Romania</div>
+    <div><a href="privacy.html">Privacy</a> · <a href="mailto:hello@your-domain.example">Contact</a></div>
+  </footer>
+</main>
+</body>
+</html>

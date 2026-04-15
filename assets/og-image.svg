@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B3D91"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1000" cy="140" r="220" fill="#C8102E" opacity="0.15"/>
+  <circle cx="1030" cy="160" r="150" fill="#C8102E" opacity="0.18"/>
+  <text x="80" y="210" font-family="Arial, Helvetica, sans-serif" font-size="64" fill="#FFFFFF" font-weight="700">
+    EU VAT Bridge
+  </text>
+  <text x="80" y="290" font-family="Arial, Helvetica, sans-serif" font-size="38" fill="#E5E7EB">
+    VAT Consulting for Chinese Companies Selling into Europe
+  </text>
+  <rect x="80" y="360" width="520" height="70" rx="18" fill="#C8102E"/>
+  <text x="115" y="408" font-family="Arial, Helvetica, sans-serif" font-size="30" fill="#FFFFFF" font-weight="700">
+    OSS / IOSS • Registrations • Filings
+  </text>
+</svg>
